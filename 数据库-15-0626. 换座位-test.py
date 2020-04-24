@@ -63,7 +63,7 @@ class Solution(object):
                     (select
                         @k := id + if(id & 1, 1, -1) as id, student
                     from
-                        (select @k := 1) as init, seat
+                        seat
                     order by 
                         id) as t,
                     (select @seq := 0) as init
